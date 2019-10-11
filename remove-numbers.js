@@ -14,11 +14,11 @@ function arrayToList(arr) {
   return head
 }
 
-function listToArray(list) {
+function listToArray(node) {
   const arr = []
-  while(list) {
-    arr.push(list.value)
-    list = list.next
+  while(node) {
+    arr.push(node.value)
+    node = node.next
   }
   return arr
 }
