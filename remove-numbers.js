@@ -50,16 +50,15 @@ function removeNumbers(head) {
 let bigArray
 
 // performance test
-fs.readFile('./list.txt', (err, data) => {
+fs.readFile('./list-2019.txt', (err, data) => {
   if(err) console.log(err)
-  bigArray = data.toString().split('\n').map(line => line.split(' ').map(Number))[0]// size = 399899
-  const originalSum = bigArray.reduce((a, b) => a + b, 0) // 50908
+  bigArray = data.toString().split('\n').map(line => line.split(' ').map(Number))[0]
+  const originalSum = bigArray.reduce((a, b) => a + b, 0) // 2019
   const bigList = arrayToList(bigArray)
   const beforeTime = new Date().getTime()
   const newBigList = removeNumbers(bigList)
   const afterTime = new Date().getTime()
-  const newBigArray = listToArray(newBigList) // size = 49887
-  const newSum = newBigArray.reduce((a, b) => a + b, 0) // 50908
+  const newBigArray = listToArray(newBigList) // [ 2019 ]
   console.log(`running time: ${afterTime - beforeTime}ms`) // ~140ms
 })
 
