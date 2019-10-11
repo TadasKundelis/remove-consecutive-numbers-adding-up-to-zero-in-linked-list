@@ -94,8 +94,8 @@ const tests = [
     expected: []
   },
   {
-    inputArray: [5, 5, 5, 5, -20, -9, 3, 3, 3, 3],
-    expected: [3]
+    inputArray: [2, 5, 5, 5, 5, -20, -9, 3, 3, 3, 3, -2],
+    expected: [2, 3, -2]
   },
 ]
 
